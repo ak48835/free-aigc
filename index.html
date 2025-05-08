@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>论文相似度检测系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>专业论文相似度检测系统</h1>
+            <p class="subtitle">权威 · 精准 · 快速</p>
+        </header>
+        
+        <div class="upload-section">
+            <h2>请上传您的论文</h2>
+            <div class="file-upload">
+                <input type="file" id="fileInput" accept=".doc,.docx,.pdf,.txt">
+                <label for="fileInput" class="file-label">选择文件</label>
+                <p id="fileName">未选择任何文件</p>
+            </div>
+            
+            <div class="options">
+                <div class="option-group">
+                    <label>检测方式：</label>
+                    <select>
+                        <option>全文检测</option>
+                        <option>核心内容检测</option>
+                        <option>章节检测</option>
+                    </select>
+                </div>
+                
+                <div class="option-group">
+                    <label>检测数据库：</label>
+                    <select>
+                        <option>全库检测</option>
+                        <option>CNKI数据库</option>
+                        <option>万方数据库</option>
+                        <option>国际数据库</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="startCheck" class="check-btn">开始检测</button>
+        </div>
+        
+        <div class="result-section" id="resultSection">
+            <h2>检测结果</h2>
+            <div class="progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="result-display">
+                <div class="result-number">
+                    <span id="resultValue">--</span><span>%</span>
+                </div>
+                <p id="resultText">等待检测...</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2024 论文相似度检测系统 | 声明：本系统仅供娱乐，检测结果不具参考价值</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
